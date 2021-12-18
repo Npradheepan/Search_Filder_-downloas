@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color: #000000;
+}
+html {
+    scroll-behavior: smooth;
+}
+.search-component{
+    width: 100%;
+    height: 100vh;
+}
+h1{
+    font-size: 2rem;
+    color: rgb(67, 192, 241);
+    text-align: center;
+}
+.dropdown-content{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2,auto);
+    justify-content: center;
+}
+#dropdownbtn {
+    background-color: rgb(248, 92, 35);
+    color: #000000;
+    padding: 1rem 5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative;
+}
+#dropdownbtn:hover,#dropdownbtn:focus{
+    background-color: rgb(247, 137, 98);
+}
+.arrow{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+.dropdownlist{
+    margin-top: 6px;
+    max-height: 300px;
+    overflow: auto;
+    background-color: burlywood;
+    outline: 1x solid cornsilk;
+     display: none; 
+}
+.show {
+    display: block;
+}
+.search{
+    width: 100%;
+    height: 6vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.search > i{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+.search > input[type=text]{
+    flex: 1;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+#links .link{
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(192, 36, 8);
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    transition: all .5s;
+    border-bottom: 1px solid chocolate;
+}
+#links .link:hover {
+    background-color:rgb(248, 228, 202);
+    color:rgb(241, 138, 138)
+}
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 3rem;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from {
+        text-shadow: 0 0 5px #fff ,0 0 10px #fff,0 0 15px #0073e6,  0 0 20px #007336, 0 0 25px, #009486 0 0 30px, rgba(2, 7, 75, 0.533) 0 0 35px;
+    }to{
+        text-shadow: 0 0 5px #fff ,0 0 10px #fff,0 0 15px #0073e6,  0 0 20px #007336, 0 0 25px, #009486 0 0 30px, rgba(2, 19, 112, 0.533) 0 0 35px;
+    }
+}
+.to-top {
+    background-color: aliceblue;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    text-decoration: none;
+    color: currentColor;
+    font-size: 2rem;
+    opacity: 0;
+}
+.to-top.active {
+    opacity: 1;
+}
+.ion-chevron-up, .ion-chevron-down {
+    animation: animate .7s ease-in-out infinite alternate;
+}
+@keyframes  animate {
+    from {
+        margin-bottom: 12px;
+        color: #ffffff;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}
